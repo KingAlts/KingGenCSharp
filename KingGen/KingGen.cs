@@ -30,7 +30,7 @@ public class KingGen
             RequestUri = new Uri("https://kinggen.wtf/api/v2/" + endpoint.Build() + "?key=" + _apiKey),
         };
         var response = client.Send(request);
-        var reader = request.Content?.ReadAsStringAsync();
+        var reader = response.Content?.ReadAsStringAsync();
         reader?.Wait();
         var json = reader?.Result;
         if ((int) response.StatusCode < 300)
