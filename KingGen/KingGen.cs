@@ -29,13 +29,14 @@ public class KingGen
             Method = HttpMethod.Get,
             RequestUri = new Uri("https://kinggen.wtf/api/v2/" + endpoint.Build() + "?key=" + _apiKey),
         };
-        var response = client.Send(request);
-        var reader = response.Content?.ReadAsStringAsync();
+        var response = client.SendAsync(request);
+        response.Wait();
+        var reader = response.Result.Content?.ReadAsStringAsync();
         reader?.Wait();
         var json = reader?.Result;
-        if ((int) response.StatusCode < 300)
-            return string.IsNullOrEmpty(json) ? default : JsonSerializer.Deserialize<T>(json);
-        var error = JsonSerializer.Deserialize<Error>(!string.IsNullOrEmpty(json) ? json : "");
+        if ((int) response.Result.StatusCode < 300)
+            return string.IsNullOrEmpty(json) ? default : JsonSerializer.Deserialize<T>(json!);
+        var error = JsonSerializer.Deserialize<Error>(!string.IsNullOrEmpty(json) ? json! : "");
         throw new Exception(error?.Message);
     }
 }
