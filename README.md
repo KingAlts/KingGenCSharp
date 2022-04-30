@@ -1,4 +1,4 @@
-# KingGenCSharp
+# KingGen
 
 The official wrapper for https://kinggen.wtf
 
