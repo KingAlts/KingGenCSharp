@@ -12,8 +12,9 @@
         <PackageProjectUrl>https://kinggen.wtf</PackageProjectUrl>
         <RepositoryUrl>https://github.com/KingAlts/KingGenCSharp</RepositoryUrl>
         <Company>KingAlts</Company>
-        <AssemblyVersion>1.0.0</AssemblyVersion>
-        <FileVersion>1.0.0</FileVersion>
+        <AssemblyVersion>1.0.1</AssemblyVersion>
+        <FileVersion>1.0.1</FileVersion>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
