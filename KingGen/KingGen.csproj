@@ -5,6 +5,15 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10.0</LangVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>KingGen</Title>
+        <Authors>Cystemzz</Authors>
+        <Description>The offical wrapper for KingGen.</Description>
+        <PackageProjectUrl>https://kinggen.wtf</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/KingAlts/KingGenCSharp</RepositoryUrl>
+        <Company>KingAlts</Company>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
     </PropertyGroup>
 
     <ItemGroup>
